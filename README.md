@@ -17,7 +17,7 @@ sudo apt install mumble mumble-server
 sudo systemctl stop mumble-server.service
 sudo /lib/systemd/systemd-sysv-install disable mumble-server
 wget https://github.com/pzmarzly/mic_over_mumble/raw/master/mic_over_mumble
-
+chmod 744 mic_over_mumble
 
 ```
 

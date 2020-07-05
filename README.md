@@ -10,12 +10,15 @@ This is the lowest latency I've ever achieved (sounds almost like local loopback
 
 Install Mumble (desktop client) + Murmur (server) + Plumble (Android/iOS client). Set all 3 programs to use best quality and minimal latency. Set mobile client to always streaming.
 
-To install Mumble + Murmur on Ubuntu, you can use:
+To install Mumble + Murmur on armbian, you can use:
 
 ```bash
 sudo apt install mumble mumble-server
 sudo systemctl stop mumble-server.service
-sudo systemctl disable mumble-server.service
+sudo /lib/systemd/systemd-sysv-install disable mumble-server
+wget https://github.com/pzmarzly/mic_over_mumble/raw/master/mic_over_mumble
+
+
 ```
 
 Copy `mic_over_mumble` anywhere - it will use `~/.mic_over_Mumble` as configuration directory.
